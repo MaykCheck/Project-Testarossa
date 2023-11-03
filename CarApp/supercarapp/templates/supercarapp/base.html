@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'supercarapp/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>SuperCarApp</title>
+    {% block css_files %}{% endblock %}
+</head>
+<body style="background-color: rgb(37, 37, 37); margin-top: 125px;">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a href="#" class="navbar-brand">SuperCarApp</a>
+        <div class="navbar">
+            <a class="nav-item nav-link" href="{% url 'supercarapp:CreateCar' %}" style="color: green;" id="tuş1"><div class="tuşyazı">Add Car</div></a>
+            <a class="nav-item nav-link" href="#" style="color: green;" id="tuş2"><div class="tuşyazı">Delete Car</div></a>
+            <a class="nav-item nav-link" href="#" style="color: green;" id="tuş3"><div class="tuşyazı">View Car</div></a>
+            {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'logout' %}" style="color: green;" id="tuş5"><div class="tuşyazı">Logout</div></a>
+                <a class="nav-item nav-link" href="{% url 'profile' %}" style="color: green;" id="tuş7"><div class="tuşyazı">Profile</div></a>
+            {% else %}
+                <a class="nav-item nav-link" href="{% url 'login' %}" style="color: green;" id="tuş4"><div class="tuşyazı">Login</div></a>
+            {% endif %}
+            <a class="nav-item nav-link" href="#" style="color: green;" id="tuş6"><div class="tuşyazı">Sign Up</div></a>
+        </div>
+    </nav>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert- {{ message.tags }}" style="color: green; background-color: rgb(196, 238, 196);">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

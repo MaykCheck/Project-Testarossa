@@ -1,0 +1,19 @@
+{% extends 'supercarapp/base.html' %}
+{% load static %}
+
+{% block css_files %}<link rel="stylesheet" href="{% static 'supercarapp/detail.css' %}">{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="card">
+        <img height="300px" src="{{ Car.CarImage }}" class="photo"/>
+        <div class="specs">
+            <h1>{{ Car.CarName }}</h1>
+            <h2>{{ Car.CarDesc }}</h2>
+            <h3>${{ Car.CarPrice }}</h3>  
+            <a href="{% url 'supercarapp:DeleteCar' Car.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+{% endblock %}    

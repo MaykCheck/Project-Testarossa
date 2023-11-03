@@ -1,0 +1,90 @@
+#tuş1 {
+    border: 1px solid green;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş1:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş2 {
+    border: 1px solid green;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş2:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş3 {
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş3:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş4 {
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş4:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş5 {
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş5:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş6 {
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş6:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+#tuş7 {
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: rgb(94, 156, 94);
+}
+
+#tuş7:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+.tuşyazı {
+    color: whitesmoke;
+}
+
+.tuşyazı:hover {
+    color: black;
+}
